@@ -1,0 +1,74 @@
+{
+    "atomKeymap.promptV3Features": true,
+    "breadcrumbs.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    // "editor.codeLens": false,
+    "editor.fontWeight": "700",
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "editor.suggest.localityBonus": true,
+    "files.associations": {
+        "*.json": "jsonc",
+        ".eslintrc": "jsonc",
+        ".tmux.conf.local": "properties"
+    },
+    "files.trimTrailingWhitespace": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "openInGitHub.defaultPullRequestBranch": "develop",
+    "openInGitHub.gitHubDomain": "https://bitbucket.ops.expertcity.com/scm/ggc/billing-portal.git",
+    "openInGitHub.providerType": "bitbucket",
+    "openInGitHub.requireSelectionForLines": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "window.zoomLevel": 0,
+    "workbench.editor.openSideBySideDirection": "down",
+    "[confluence]": {
+        "editor.wordWrap": "on"
+    },
+    "editor.copyWithSyntaxHighlighting": false,
+    "autoimport.filesToScan": "**/*.js",
+    "gitlens.remotes": [
+        {
+            "domain": "bitbucket.ops.expertcity.com",
+            "type": "BitbucketServer",
+            "protocol": "https"
+        }
+    ],
+    "yaml.schemas": {
+        "file:///Users/mlillie/.vscode/extensions/atlassian.atlascode-1.2.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "editor.snippetSuggestions": "top",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "workbench.colorTheme": "Comrade (rainglow)",
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "gitlens.advanced.messages": {
+        "suppressLineUncommittedWarning": true
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "rust-client.enableMultiProjectSetup": true,
+}

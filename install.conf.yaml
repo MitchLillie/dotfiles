@@ -1,0 +1,32 @@
+# docs at https://github.com/anishathalye/dotbot
+
+- create:
+  - ~/bin # nothing will live here, but creating it as a placeholder for future work
+  - ~/.tmux/plugins
+- link:
+    # Link this whole directory
+    ~/.config/:
+      glob: true
+      path: config/*
+      relink: true
+    # tmux
+    ~/.tmux.conf: oh-my-tmux/.tmux.conf
+    ~/.tmux.conf.local:
+    ~/.tmux/plugins/: tpm
+
+    # git
+    ~/.gitconfig:
+
+    # zsh
+    ~/.zlogin:
+    ~/.zprofile:
+    ~/.zshrc:
+      force: true
+
+    # VSCode
+    ~/Library/Application Support/Code/User/settings.json: ./vscode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json: ./vscode/keybindings.json
+- shell:
+  - [cat vscode/extension_export | xargs -L 1 code --install-extension, Installing vscode extensions]
+  - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)", Installing homebrew]
+  - [brew bundle, Installing homebrew bundle via Brewfile]

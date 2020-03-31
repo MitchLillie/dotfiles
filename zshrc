@@ -1,8 +1,24 @@
+###############################################################################
+# OK! so I have an issue here.
+# I want to use this as my zshrc. It's already set up with all the correct
+# values from ohmyzsh, as well as adding a bunch of other stuff to my $PATH.
+# Normally, I could just pass `--keep-zshrc` to the install script.
+# However...
+# I'm not sure how to make the `export ZSH`and `export ZSH_CUSTOM` lines
+# below be responsive to wherever it is that I end up cloning the dotfiles
+# project. Hence the echo line in install.conf.yaml, instructing myself to
+# manually combine this zshrc with the one that ohmyzsh will generate on
+# installation.
+###############################################################################
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/mlillie/.oh-my-zsh"
+export ZSH="/Users/mitch/dotfiles/ohmyzsh"
+# set directory for theme/plugin overrides
+export ZSH_CUSTOM="/Users/mitch/dotfiles/zsh-custom"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -103,11 +119,6 @@ source $ZSH/oh-my-zsh.sh
 VISUAL=code; export VISUAL
 EDITOR=code; export EDITOR
 
-# Cargo (Rust package manager)
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# java home (for Tomcat & others)
-export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 
 # force `python` to point to python3 via homebrew
 # more info https://stackoverflow.com/a/49730654/5213573
@@ -121,15 +132,7 @@ export PATH="/usr/local/sbin:$PATH"
 # add path for haskell stack and maybe others
 export PATH="/Users/mlillie/.local/bin:$PATH"
 
-# oracle/sqlplus
-export ORACLE_HOME=/opt/oracle/instantclient
-export DYLD_LIBRARY_PATH=$ORACLE_HOME
-export LD_LIBRARY_PATH=$ORACLE_HOME
-export NLS_LANG=AMERICAN_AMERICA.UTF8
-export TNS_ADMIN=$HOME/etc
-export PATH=$PATH:$ORACLE_HOME
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # brew ruby stuff
 # If you need to have ruby first in your PATH run:

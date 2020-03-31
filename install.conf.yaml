@@ -1,8 +1,14 @@
 # docs at https://github.com/anishathalye/dotbot
 
+- defaults:
+    link:
+      relink: true
 - create:
-  - ~/bin # nothing will live here, but creating it as a placeholder for future work
-  - ~/.tmux/plugins
+    - ~/bin # nothing will live here, but creating it as a placeholder for future work
+    - ~/.tmux/plugins
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [./fonts/install.sh, Installing Powerline fonts]
 - link:
     # Link this whole directory
     ~/.config/:
@@ -11,22 +17,29 @@
       relink: true
     # tmux
     ~/.tmux.conf: oh-my-tmux/.tmux.conf
-    ~/.tmux.conf.local:
-    ~/.tmux/plugins/: tpm
+    ~/.tmux.conf.local: tmux.conf.local
+    ~/.tmux/plugins/tpm: tpm
 
     # git
     ~/.gitconfig:
+      force: true
 
     # zsh
     ~/.zlogin:
-    ~/.zprofile:
     ~/.zshrc:
       force: true
+    # see more steps in shell below to install oh-my-zsh
 
     # VSCode
-    ~/Library/Application Support/Code/User/settings.json: ./vscode/settings.json
-    ~/Library/Application Support/Code/User/keybindings.json: ./vscode/keybindings.json
+    ~/Library/Application Support/Code/User/settings.json:
+      path: ./vscode/settings.json
+      force: true
+    ~/Library/Application Support/Code/User/keybindings.json:
+      path: ./vscode/keybindings.json
+      force: true
 - shell:
   - [cat vscode/extension_export | xargs -L 1 code --install-extension, Installing vscode extensions]
   - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)", Installing homebrew]
   - [brew bundle, Installing homebrew bundle via Brewfile]
+  - [ZSH="$(pwd)/ohmyzsh" ZSH_CUSTOM="$(pwd)/zsh-custom" sh ./ohmyzsh/tools/install.sh --unattended, Installing oh-my-zsh]
+  - [echo "I think you'll need to handle merging the zshrc with the pre.ohmyzsh version."]

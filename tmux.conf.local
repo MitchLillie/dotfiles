@@ -277,23 +277,18 @@ tmux_conf_copy_to_os_clipboard=true
 # this is the place to override or undo settings
 
 # TPM
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-sensible'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @plugin 'tmux-plugins/tmux-copycat'
-set -g @plugin 'tmux-plugins/tmux-open'
-set -g @plugin 'tmux-plugins/tmux-yank'
+# NOTE: We need to do it this way because... I don't know. There was some issue with the normal way of specifying plugins.
+set -g @tpm_plugins '            \
+    tmux-plugins/tpm             \
+    tmux-plugins/tmux-sensible   \
+    tmux-plugins/tmux-resurrect  \
+    tmux-plugins/tmux-continuum  \
+    tmux-plugins/tmux-copycat    \
+    tmux-plugins/tmux-open       \
+    tmux-plugins/tmux-yank       \
+'
 set -g @continuum-restore 'on'
 
-set -g @resurrect-processes '\
-    "~yarn start->start" \
-    "~yarn \"test:dev\"->testdev" \
-    "~yarn \"test:changed\"->testchanged" \
-    "~yarn \"test:changed:dev\"->testchangeddev" \
-    "~yarn \"test:local\"->testlocal" \
-    "~yarn \"test:local:dev\"->testlocaldev" \
-'
 
 # This is the best way but not working:
 # set -g @copycat_url_search 'C-t' # move default url search here
@@ -329,4 +324,4 @@ set -g default-terminal "screen-256color"
 #set -g status-position top
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run -b '~/.tmux/plugins/tpm/tpm'
+run '~/.tmux/plugins/tpm/tpm'

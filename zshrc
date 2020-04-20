@@ -85,7 +85,7 @@ ZSH_THEME="theunraveler-custom" # Custom theme: Basically, use `simple` but get 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages nvm yarn zsh_reload z)
+plugins=(git colored-man-pages nvm yarn z)
 
 source $ZSH/oh-my-zsh.sh
 

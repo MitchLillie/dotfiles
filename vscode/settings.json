@@ -12,7 +12,8 @@
     "files.associations": {
         "*.json": "jsonc",
         ".eslintrc": "jsonc",
-        ".tmux.conf.local": "properties"
+        ".tmux.conf.local": "properties",
+        "*.nginx": "NGINX"
     },
     "files.trimTrailingWhitespace": true,
     "gitlens.hovers.currentLine.over": "line",
@@ -24,7 +25,7 @@
     "openInGitHub.requireSelectionForLines": true,
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
     "window.zoomLevel": 0,
-    "workbench.editor.openSideBySideDirection": "down",
+    "workbench.editor.openSideBySideDirection": "right",
     "[confluence]": {
         "editor.wordWrap": "on"
     },
@@ -32,8 +33,8 @@
     "autoimport.filesToScan": "**/*.js",
     "gitlens.remotes": [
         {
-            "domain": "bitbucket.ops.expertcity.com",
-            "type": "BitbucketServer",
+            "domain": "git.moogsoft.com",
+            "type": "GitLab",
             "protocol": "https"
         }
     ],
@@ -49,9 +50,9 @@
     "workbench.colorTheme": "Comrade (rainglow)",
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": true,
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
+    // "[javascript]": {
+    //     "editor.defaultFormatter": "vscode.typescript-language-features"
+    // },
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
@@ -71,4 +72,7 @@
         "source.fixAll.eslint": true
     },
     "rust-client.enableMultiProjectSetup": true,
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    }
 }

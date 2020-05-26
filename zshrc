@@ -149,3 +149,5 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 # export PATH="$PATH:$HOME/.rvm/bin"
 
 export PATH="/Users/mlillie/bin:$PATH"
+
+export MOOGSOFT_HOME="/Users/mitch/Documents/moogsoft/ui"

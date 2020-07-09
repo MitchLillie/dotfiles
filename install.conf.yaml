@@ -43,3 +43,4 @@
   - [brew bundle, Installing homebrew bundle via Brewfile]
   - [ZSH="$(pwd)/ohmyzsh" ZSH_CUSTOM="$(pwd)/zsh-custom" sh ./ohmyzsh/tools/install.sh --unattended, Installing oh-my-zsh]
   - [echo "I think you'll need to handle merging the zshrc with the pre.ohmyzsh version."]
+  - [echo "Run <prefix> + I inside of tmux to load plugins."]

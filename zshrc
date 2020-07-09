@@ -16,9 +16,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/mitch/dotfiles/ohmyzsh"
+export ZSH="/Users/mitch.lillie/pers/dotfiles/ohmyzsh"
 # set directory for theme/plugin overrides
-export ZSH_CUSTOM="/Users/mitch/dotfiles/zsh-custom"
+export ZSH_CUSTOM="/Users/mitch.lillie/pers/dotfiles/zsh-custom"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -125,12 +125,12 @@ EDITOR=code; export EDITOR
 export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 
 # add python 3.7 to path?
-export PATH="/Users/mlillie/Library/Python/3.7/bin:$PATH"
+export PATH="/Users/mitch.lillie/Library/Python/3.7/bin:$PATH"
 
 export PATH="/usr/local/sbin:$PATH"
 
 # add path for haskell stack and maybe others
-export PATH="/Users/mlillie/.local/bin:$PATH"
+export PATH="/Users/mitch.lillie/.local/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -148,6 +148,10 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"
 
-export PATH="/Users/mlillie/bin:$PATH"
+export PATH="/Users/mitch.lillie/bin:$PATH"
 
-export MOOGSOFT_HOME="/Users/mitch/Documents/moogsoft/ui"
+export MOOGSOFT_HOME="/Users/mitch.lillie/moogsoft/ui"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(jira --completion-script-bash)" # this loads go-jira completion

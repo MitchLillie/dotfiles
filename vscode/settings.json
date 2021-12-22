@@ -1,9 +1,10 @@
 {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "atomKeymap.promptV3Features": true,
     "breadcrumbs.enabled": true,
     "diffEditor.ignoreTrimWhitespace": true,
     // "editor.codeLens": false,
-    "editor.fontWeight": "700",
+    "editor.fontWeight": "500",
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderControlCharacters": true,
@@ -13,7 +14,8 @@
         "*.json": "jsonc",
         ".eslintrc": "jsonc",
         ".tmux.conf.local": "properties",
-        "*.nginx": "NGINX"
+        "*.nginx": "NGINX",
+        "*.def": "hjson"
     },
     "files.trimTrailingWhitespace": true,
     "gitlens.hovers.currentLine.over": "line",
@@ -24,7 +26,6 @@
     "openInGitHub.providerType": "bitbucket",
     "openInGitHub.requireSelectionForLines": true,
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
-    "window.zoomLevel": 0,
     "workbench.editor.openSideBySideDirection": "right",
     "[confluence]": {
         "editor.wordWrap": "on"
@@ -32,11 +33,12 @@
     "editor.copyWithSyntaxHighlighting": false,
     "autoimport.filesToScan": "**/*.js",
     "gitlens.remotes": [
-        {
-            "domain": "git.moogsoft.com",
-            "type": "GitLab",
-            "protocol": "https"
-        }
+        // fill in if gitlens is needed
+        // {
+        //     "domain": "git.whatever.com",
+        //     "type": "tbd",
+        //     "protocol": "tbd"
+        // }
     ],
     "yaml.schemas": {
         "file:///Users/mlillie/.vscode/extensions/atlassian.atlascode-1.2.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
@@ -48,8 +50,8 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "workbench.colorTheme": "Comrade (rainglow)",
-    "editor.cursorBlinking": "phase",
-    "editor.cursorSmoothCaretAnimation": true,
+    // "editor.cursorBlinking": "phase",
+    // "editor.cursorSmoothCaretAnimation": true,
     // "[javascript]": {
     //     "editor.defaultFormatter": "vscode.typescript-language-features"
     // },
@@ -71,7 +73,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "rust-client.enableMultiProjectSetup": true,
+    "rust-client.enableMultiProjectSetup": null,
     "[vue]": {
         "editor.defaultFormatter": "octref.vetur"
     },
@@ -84,5 +86,55 @@
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.rulers": [
+        100
+    ],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#000000"
+    },
+    "git.autofetch": true,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "support.class.component.html",
+                "settings": {
+                    "foreground": "#C24E4B"
+                }
+            }
+        ]
+    },
+    "java.project.importHint": false,
+    "extensions.ignoreRecommendations": false,
+    // enabled to get access to the prettier shell script plugin
+    "prettier.resolveGlobalModules": true,
+    "[shellscript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "shellformat.effectLanguages": [
+        "shellscript",
+        "dockerfile",
+        "dotenv",
+        "hosts",
+        "jvmoptions",
+        "ignore",
+        "gitignore",
+        "properties",
+        "spring-boot-properties",
+        "azcli"
+    ],
+    "workbench.startupEditor": "welcomePage",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "gitlens.menus": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "vetur.completion.scaffoldSnippetSources": {
+
+        "workspace": "💼",
+        "user": "🗒️",
+        "vetur": "✌"
     }
 }

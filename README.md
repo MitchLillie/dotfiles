@@ -8,4 +8,5 @@ Managed by [dotbot](https://github.com/anishathalye/dotbot)
 
 ## To install:
 1. Clone this repo to $HOME
-1. `./install`
+2. Edit the line in gitconfig with your git email (this sucks and should be improved)
+3. `./install`

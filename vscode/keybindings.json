@@ -20,4 +20,8 @@
         "key": "cmd+f9",
         "command": "workbench.action.zoomReset"
     }
-]
+,{
+    "key": "shift+cmd+d",
+    "command": "commandId",
+    "when": "editorTextFocus"
+}]

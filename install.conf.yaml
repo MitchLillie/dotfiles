@@ -10,11 +10,6 @@
     - [git submodule update --init --recursive, Installing submodules]
     - [./fonts/install.sh, Installing Powerline fonts]
 - link:
-    # Link this whole directory
-    ~/.config/:
-      glob: true
-      path: config/*
-      relink: true
     # tmux
     ~/.tmux.conf: oh-my-tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local

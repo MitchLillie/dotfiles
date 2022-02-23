@@ -21,10 +21,6 @@
     "gitlens.hovers.currentLine.over": "line",
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "openInGitHub.defaultPullRequestBranch": "develop",
-    "openInGitHub.gitHubDomain": "https://bitbucket.ops.expertcity.com/scm/ggc/billing-portal.git",
-    "openInGitHub.providerType": "bitbucket",
-    "openInGitHub.requireSelectionForLines": true,
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
     "workbench.editor.openSideBySideDirection": "right",
     "[confluence]": {
@@ -40,9 +36,6 @@
         //     "protocol": "tbd"
         // }
     ],
-    "yaml.schemas": {
-        "file:///Users/mlillie/.vscode/extensions/atlassian.atlascode-1.2.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-    },
     "editor.snippetSuggestions": "top",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",

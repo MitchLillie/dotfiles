@@ -85,7 +85,7 @@ ZSH_THEME="theunraveler-custom" # Custom theme: Basically, use `simple` but get 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages nvm yarn z)
+plugins=(git colored-man-pages yarn z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,38 +119,13 @@ source $ZSH/oh-my-zsh.sh
 VISUAL=code; export VISUAL
 EDITOR=code; export EDITOR
 
-
-# force `python` to point to python3 via homebrew
-# more info https://stackoverflow.com/a/49730654/5213573
-export PATH="$(brew --prefix python)/libexec/bin:$PATH"
-
-# add python 3.7 to path?
-export PATH="/Users/mitch.lillie/Library/Python/3.7/bin:$PATH"
-
 export PATH="/usr/local/sbin:$PATH"
-
-# add path for haskell stack and maybe others
-export PATH="/Users/mitch.lillie/.local/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# brew ruby stuff
-# If you need to have ruby first in your PATH run:
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
-# For compilers to find ruby you may need to set:
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
-
-# For pkg-config to find ruby you may need to set:
-export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-# export PATH="$PATH:$HOME/.rvm/bin"
-
+# Add bin directory for convenient personal scripts
 export PATH="/Users/mitch.lillie/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-eval "$(jira --completion-script-bash)" # this loads go-jira completion
+[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
+
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh

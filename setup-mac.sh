@@ -1,4 +1,4 @@
-#! /usr/env/bin/sh
+#! /bin/sh
 
 # Hack to skip installing on Spinstances
 if [ -z ${SPIN+x} ]

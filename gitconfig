@@ -31,6 +31,10 @@
 				git checkout $@ ;\
 			fi \
 		} ; find_and_checkout_branch"
+	current-remote = !git for-each-ref --format='%(upstream:short)' "$(git symbolic-ref -q HEAD)"
+	pullf = !git fetch --all && git reset --hard "$(git current-remote)"
+	pushf = push --force-with-lease
+	rbo = !git fetch --all && git rebase --autostash origin/main
 [fetch]
 	prune = true
 [push]

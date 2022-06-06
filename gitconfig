@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Mitch Lillie
-	email = mitch.lillie@tbd.com # NOTE: Fill this in
+	email = mitch.lillie@shopify.com # NOTE: Fill this in
 
 [alias]
 	aliases = !git config --get-regexp ^alias\\. | sed -e s/^alias.// -e s/\\ /\\ $(printf \"\\043\")--\\>\\ / | column -t -s $(printf \"\\043\") | sort -k 1

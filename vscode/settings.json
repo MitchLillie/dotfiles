@@ -125,9 +125,23 @@
     "gitlens.menus": false,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "vetur.completion.scaffoldSnippetSources": {
-
         "workspace": "💼",
         "user": "🗒️",
         "vetur": "✌"
-    }
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": false,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "javascript": true,
+        "typescriptreact": false,
+        "typescript": false
+    },
+    "typescript.tsserver.log": "off",
+    "redhat.telemetry.enabled": false,
+    "remote.SSH.defaultExtensions": [
+        "ChakrounAnas.turbo-console-log"
+    ]
 }

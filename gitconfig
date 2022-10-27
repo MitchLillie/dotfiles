@@ -39,5 +39,9 @@
 	prune = true
 [push]
 	default = current
-[core]
-	editor = code --wait
+# [core]
+# 	editor = code --wait
+[include]
+	path = /Users/mitch/.config/dev/gitconfig
+[pull]
+	ff = only

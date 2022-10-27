@@ -117,8 +117,10 @@ then
     # Example aliases
     # alias zshconfig="mate ~/.zshrc"
     # alias ohmyzsh="mate ~/.oh-my-zsh"
+    export GIT_EDITOR="vi"
 fi
 
+export GIT_EDITOR="code --wait"
 # copied from bash_profile:
 VISUAL=code; export VISUAL
 EDITOR=code; export EDITOR
@@ -135,3 +137,7 @@ export PATH="/Users/mitch.lillie/bin:$PATH"
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
+
+# Manually added these adb commands to path
+export PATH=~/Library/Android/sdk/tools:$PATH
+export PATH=~/Library/Android/sdk/platform-tools:$PATH

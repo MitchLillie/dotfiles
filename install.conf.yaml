@@ -20,7 +20,6 @@
       force: true
 
     # zsh
-    ~/.zlogin:
     ~/.zshrc:
       force: true
     # see more steps in shell below to install oh-my-zsh
